@@ -4,6 +4,8 @@ import Register from "./pages/Register";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./pages/Login";
+import PrivateComp from "./pages/PrivateComp";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
       <BrowserRouter>
         <ToastContainer />
         <Routes>
-          <Route path="/" element={<h1>Welcome to my app</h1>} />
+          <Route element={<PrivateComp />}>
+            <Route path="/" element={<Home />} />
+          </Route>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>
