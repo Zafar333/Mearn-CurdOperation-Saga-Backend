@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Login from "./pages/Login";
 import PrivateComp from "./pages/PrivateComp";
 import Home from "./pages/Home";
+import AddEditProductForm from "./pages/AddEditProductForm";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Routes>
           <Route element={<PrivateComp />}>
             <Route path="/" element={<Home />} />
+            <Route path="/product" element={<AddEditProductForm />} />
+            <Route path="/product/:id" element={<AddEditProductForm />} />
           </Route>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

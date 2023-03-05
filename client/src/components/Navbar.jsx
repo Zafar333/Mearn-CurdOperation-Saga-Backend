@@ -61,7 +61,11 @@ const Navbar = () => {
         <Link to="/">Home</Link>
         <Link to="/product">Add Product</Link>
       </div>
-      <button className="right" onClick={Logout}>
+      <button
+        className="right"
+        onClick={Logout}
+        style={{ background: "#3333ff", borderRadius: "4px", color: "white" }}
+      >
         Logout
       </button>
     </div>

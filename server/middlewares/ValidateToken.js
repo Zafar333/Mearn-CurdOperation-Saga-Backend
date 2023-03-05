@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 dotenv.config();
 export const CheckToken = (req, resp, next) => {
   let auth = req.headers.authorization;
-  console.log(auth);
   if (auth) {
     try {
       let key = process.env.SECRETKEY;
